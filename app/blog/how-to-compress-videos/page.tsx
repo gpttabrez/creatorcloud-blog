@@ -58,7 +58,7 @@ export default function Page() {
         </ul>
 
         <img
-          src="https://images.unsplash.com/photo-1551818255-e6e10975cd17"
+          src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1200&q=80"
           alt="Video processing interface"
           className="rounded-xl my-6 w-full"
         />
@@ -87,7 +87,7 @@ export default function Page() {
         </ul>
 
         <img
-          src="https://images.unsplash.com/photo-1587614382346-ac0a3d88a1a7"
+          src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80"
           alt="Video editing timeline"
           className="rounded-xl my-6 w-full"
         />
