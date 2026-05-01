@@ -163,6 +163,26 @@ export default function Page() {
         </div>
       </section>
 
+      {/* ⭐ NEW SECTION (IMPORTANT — MAIN SITE LINK) */}
+      <section className="max-w-4xl mx-auto px-6 mb-16 text-center">
+        <h2 className="text-2xl font-semibold mb-4">
+          Use Creator Tools
+        </h2>
+
+        <p className="text-gray-400 mb-6">
+          Go back to CreatorCloud to compress videos, optimize images, and manage files instantly.
+        </p>
+
+        <a
+          href="https://creatorcloud.in"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="px-5 py-2 bg-white/10 rounded-lg"
+        >
+          Open CreatorCloud →
+        </a>
+      </section>
+
       {/* BLOG GRID */}
       <section className="max-w-6xl mx-auto px-6 pb-20">
 
