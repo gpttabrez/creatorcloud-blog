@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Footer from "../components/Footer"; 
 
 export const metadata: Metadata = {
   title: "Contact Us – CreatorCloud Support & Business Queries",
@@ -27,12 +28,12 @@ export default function Page() {
             "@type": "ContactPage",
             name: "CreatorCloud Support",
             url: "https://blog.creatorcloud.in/contact",
-            email: "support@creatorcloud.in",
+            email: "creatorcloudstudio@gmail.com",
             provider: {
               "@type": "Organization",
               name: "Advisory Mediacare Services",
               url: "https://creatorcloud.in",
-              email: "support@creatorcloud.in",
+              email: "creatorcloudstudio@gmail.com",
               address: {
                 "@type": "PostalAddress",
                 addressLocality: "Bangalore",
@@ -82,10 +83,10 @@ export default function Page() {
           <p className="mt-2 text-xs text-gray-400">
             For business or payment-related inquiries:{" "}
             <a
-              href="mailto:support@creatorcloud.in"
+              href="mailto:creatorcloudstudio@gmail.com?subject=CreatorCloud Support&body=Hi CreatorCloud team,%0A%0AI need help with:%0A%0AAccount Email:%0A%0ADetails:%0A"
               className="text-cyan-300"
             >
-              support@creatorcloud.in
+              creatorcloudstudio@gmail.com
             </a>
             <span className="mx-2">•</span> Bangalore, Karnataka, India
           </p>

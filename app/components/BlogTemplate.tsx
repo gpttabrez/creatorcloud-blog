@@ -26,6 +26,19 @@ export default function BlogTemplate({ title, content }: BlogProps) {
           {content}
         </article>
 
+        {/* 🔥 SEO INTERNAL LINK (ADDED) */}
+        <p className="mt-10 text-sm text-gray-400">
+          Explore more at{" "}
+          <a
+            href="https://creatorcloud.in"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-cyan-300 hover:underline"
+          >
+            CreatorCloud Tools
+          </a>
+        </p>
+
         {/* AUTHOR */}
         <div className="mt-16 p-6 rounded-xl bg-white/5 border border-white/10">
           <h3 className="text-lg font-semibold mb-2">About CreatorCloud</h3>
@@ -61,13 +74,27 @@ export default function BlogTemplate({ title, content }: BlogProps) {
           <h3 className="text-lg font-semibold mb-4">⚡ Tools</h3>
 
           <div className="flex flex-col gap-3 text-sm">
-            <a href="https://creatorcloud.in/video/compress" target="_blank">
+            <a
+              href="https://creatorcloud.in/video/compress"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Video Compressor
             </a>
-            <a href="https://creatorcloud.in/image/compress" target="_blank">
+
+            <a
+              href="https://creatorcloud.in/image/compress"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Image Compressor
             </a>
-            <a href="https://creatorcloud.in/pdf/merge" target="_blank">
+
+            <a
+              href="https://creatorcloud.in/pdf/merge"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               PDF Merge
             </a>
           </div>

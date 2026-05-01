@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Footer from "../components/Footer";
 
 export const metadata: Metadata = {
   title: "Privacy Policy — CreatorCloud | No Permanent Storage",
@@ -276,6 +277,9 @@ export default function Page() {
         </p>
 
       </section>
+
+      <Footer />
+      
     </main>
   );
 }

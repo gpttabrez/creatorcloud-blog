@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Footer from "../components/Footer";
 
 export const metadata: Metadata = {
   title: "Refund & Payment Policy – CreatorCloud",
@@ -123,6 +124,9 @@ export default function Page() {
         </p>
 
       </section>
+
+      <Footer />
+      
     </main>
   );
 }

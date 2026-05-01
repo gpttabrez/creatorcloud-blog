@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Footer from "../components/Footer";
 
 export const metadata: Metadata = {
   title: "About CreatorCloud – Fast Video Compress, PDF Tools, MP3 Convert",
@@ -94,10 +95,10 @@ export default function Page() {
           </p>
         </div>
 
-        {/* 🔥 INTERNAL BLOG LINK */}
+        {/* 🔥 FIXED BLOG LINK */}
         <div className="mt-10 text-center">
           <a
-            href="/blog"
+            href="/"
             className="px-5 py-2 bg-white/10 rounded-lg"
           >
             Visit Blog →
@@ -117,6 +118,9 @@ export default function Page() {
           Use CreatorCloud Tools →
         </a>
       </div>
+
+      {/* ✅ FOOTER ADDED HERE */}
+      <Footer />
 
     </main>
   );
