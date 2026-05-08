@@ -192,18 +192,28 @@ const WaSvg = ({ size=20 }) => (
 /* ═══════════════════════════════════════════════════════════
    HOOKS
 ═══════════════════════════════════════════════════════════ */
-function useParticleCanvas(ref) {
+function useParticleCanvas(
+  ref: RefObject<HTMLCanvasElement | null>
+) {
   useEffect(() => {
     const canvas = ref.current;
     if (!canvas) return;
-    const ctx = canvas.getContext("2d");
-    let id;
+    const ctx = canvas.getContext("2d")!;
+    let id: number;
     let mouse  = { x: window.innerWidth/2, y: window.innerHeight/2 };
     let smooth = { x: mouse.x, y: mouse.y };
     const resize = () => { canvas.width=window.innerWidth; canvas.height=window.innerHeight; };
     resize();
     window.addEventListener("resize", resize);
-    const onMove = (e) => { mouse.x=e.touches?e.touches[0].clientX:e.clientX; mouse.y=e.touches?e.touches[0].clientY:e.clientY; };
+    const onMove = (e: MouseEvent | TouchEvent) => {
+  if ("touches" in e) {
+    mouse.x = e.touches[0].clientX;
+    mouse.y = e.touches[0].clientY;
+  } else {
+    mouse.x = e.clientX;
+    mouse.y = e.clientY;
+  }
+};
     window.addEventListener("mousemove", onMove);
     window.addEventListener("touchmove", onMove, {passive:true});
     const isMobile = window.innerWidth < 768;
@@ -244,11 +254,17 @@ function useParticleCanvas(ref) {
   },[ref]);
 }
 
-function useNeuralCanvas(canvasRef, centerRef, nodeRefs) {
+function useNeuralCanvas(
+  canvasRef: RefObject<HTMLCanvasElement | null>,
+  centerRef: RefObject<HTMLDivElement | null>,
+  nodeRefs: RefObject<(HTMLDivElement | null)[]>
+) {
   useEffect(()=>{
     const canvas=canvasRef.current; if(!canvas)return;
-    const ctx=canvas.getContext("2d"); let id,pulse=0;
-    const resize=()=>{const r=canvas.parentElement.getBoundingClientRect();canvas.width=r.width;canvas.height=r.height;};
+    const ctx = canvas.getContext("2d")!;
+let id: number;
+let pulse = 0;
+    const resize=()=>{const r=canvas.parentElement!.getBoundingClientRect();canvas.width=r.width;canvas.height=r.height;};
     resize(); window.addEventListener("resize",resize);
     const draw=()=>{
       ctx.clearRect(0,0,canvas.width,canvas.height);
@@ -257,7 +273,7 @@ function useNeuralCanvas(canvasRef, centerRef, nodeRefs) {
       const nr=canvas.getBoundingClientRect(),cr=center.getBoundingClientRect();
       const cx=cr.left-nr.left+cr.width/2,cy=cr.top-nr.top+cr.height/2;
       pulse+=0.05;
-      nodes.forEach((node,i)=>{
+      nodes.forEach((node: HTMLDivElement | null, i: number)=>{
         if(!node)return;
         const r=node.getBoundingClientRect();
         const nx=r.left-nr.left+r.width/2,ny=r.top-nr.top+r.height/2;
@@ -289,18 +305,23 @@ ctx.lineTo(endX, endY);
   },[canvasRef,centerRef,nodeRefs]);
 }
 
-function useHeroParallax(heroBoxRef, sphereRefs, techRefs, ambientRef) {
+function useHeroParallax(
+  heroBoxRef: RefObject<HTMLDivElement | null>,
+  sphereRefs: RefObject<(HTMLImageElement | null)[]>,
+  techRefs: RefObject<(HTMLDivElement | null)[]>,
+  ambientRef: RefObject<HTMLDivElement | null>
+) {
   useEffect(()=>{
     let mouse={x:window.innerWidth/2,y:window.innerHeight/2};
-    let smooth={x:mouse.x,y:mouse.y}; let id;
-    const onMove=(e)=>{mouse.x=e.clientX??mouse.x;mouse.y=e.clientY??mouse.y;};
+    let smooth={x:mouse.x,y:mouse.y}; let id: number;
+    const onMove=(e: MouseEvent)=>{mouse.x=e.clientX??mouse.x;mouse.y=e.clientY??mouse.y;};
     window.addEventListener("mousemove",onMove);
     const tick=()=>{
       smooth.x+=(mouse.x-smooth.x)*0.2; smooth.y+=(mouse.y-smooth.y)*0.2;
       const x=(smooth.x/window.innerWidth-0.5)*18,y=(smooth.y/window.innerHeight-0.5)*18;
       if(heroBoxRef.current)heroBoxRef.current.style.transform=`rotateY(${x*0.6}deg) rotateX(${-y*0.6}deg)`;
-      sphereRefs.current.forEach((el,i)=>{if(el)el.style.transform=`translate(${x*(i+1.2)}px,${y*(i+1.2)}px)`;});
-      techRefs.current.forEach((el,i)=>{if(el)el.style.transform=`translate(${x*i*0.5}px,${y*i*0.5}px)`;});
+      sphereRefs.current.forEach((el: HTMLImageElement | null, i: number)=>{if(el)el.style.transform=`translate(${x*(i+1.2)}px,${y*(i+1.2)}px)`;});
+      techRefs.current.forEach((el: HTMLDivElement | null, i: number)=>{if(el)el.style.transform=`translate(${x*i*0.5}px,${y*i*0.5}px)`;});
       if(ambientRef.current)ambientRef.current.style.transform=`translate(${x*3}px,${y*3}px)`;
       id=requestAnimationFrame(tick);
     };
@@ -309,21 +330,25 @@ function useHeroParallax(heroBoxRef, sphereRefs, techRefs, ambientRef) {
   },[heroBoxRef,sphereRefs,techRefs,ambientRef]);
 }
 
-function useScrollReveal(refs) {
+function useScrollReveal(
+  refs: RefObject<(HTMLDivElement | null)[]>
+) {
   useEffect(()=>{
     const obs=new IntersectionObserver(entries=>{
       entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add("tp-show");obs.unobserve(e.target);}});
     },{threshold:0.1});
-    refs.current.forEach(el=>{if(el)obs.observe(el);});
+    refs.current.forEach((el: HTMLDivElement | null)=>{if(el)obs.observe(el);});
     return()=>obs.disconnect();
   },[refs]);
 }
 
-function useCardTilt(ref) {
+function useCardTilt(
+  ref: RefObject<HTMLDivElement | null>
+) {
   useEffect(()=>{
     const el=ref.current; if(!el)return;
     const leave=()=>{el.style.transform="translateY(0) scale(1) rotateX(0deg) rotateY(0deg)";};
-    const move=(e)=>{
+    const move=(e: MouseEvent)=>{
       const r=el.getBoundingClientRect();
       const rx=-((e.clientY-r.top)/r.height-0.5)*10;
       const ry=((e.clientX-r.left)/r.width-0.5)*10;
@@ -334,7 +359,10 @@ function useCardTilt(ref) {
   },[ref]);
 }
 
-function useSectionReveal() {
+function useSectionReveal(): [
+  RefObject<HTMLDivElement | null>,
+  boolean
+] {
   const ref=useRef(null); const [on,setOn]=useState(false);
   useEffect(()=>{
     const el=ref.current; if(!el)return;
@@ -355,7 +383,7 @@ function Navbar() {
     window.addEventListener("scroll",fn);
     return()=>window.removeEventListener("scroll",fn);
   },[]);
-  const scrollTo=(id)=>{
+  const scrollTo=(id:string)=>{
     document.getElementById(id.toLowerCase())?.scrollIntoView({behavior:"smooth"});
     setMenuOpen(false);
   };
@@ -389,26 +417,53 @@ function Navbar() {
   );
 }
 
-function SectionHead({ label, title }) {
-  const [ref,on]=useSectionReveal();
+function SectionHead({
+  label,
+  title
+}:{
+  label:string;
+  title:string;
+}) {
+
+  const [sectionRef, on] = useSectionReveal();
+
   return (
-    <div ref={ref} className={`tp-section-head${on?" tp-s-reveal":""}`}>
+    <div
+      ref={sectionRef}
+      className={`tp-section-head${on ? " tp-s-reveal" : ""}`}
+    >
       <span className="tp-s-label">// {label}</span>
-      <h2 className="tp-s-title">{title}</h2>
+
+      <h2 className="tp-s-title">
+        {title}
+      </h2>
+
       <div className="tp-s-line"/>
     </div>
   );
 }
 
-function SkillBlock({ skill, index }) {
+function SkillBlock({
+  skill,
+  index
+}:{
+  skill:any;
+  index:number;
+}) {
   const [ref,on]=useSectionReveal();
   return (
     <div ref={ref} className={`tp-skill-block${on?" tp-skill-in":""}`}
-      style={{"--delay":`${index*0.08}s`,"--accent":skill.color}}>
+      style={
+  {
+    "--delay": `${index * 0.08}s`,
+    "--accent": skill.color
+  } as CSSProperties
+}
+>
       <div className="tp-skill-cat" style={{color:skill.color}}>{skill.cat}</div>
       <div className="tp-skill-bar" style={{background:skill.color}}/>
       <div className="tp-skill-pills">
-        {skill.items.map(item=>(
+        {skill.items.map((item:any)=>(
           <span key={item} className="tp-skill-pill">{item}</span>
         ))}
       </div>
@@ -416,12 +471,22 @@ function SkillBlock({ skill, index }) {
   );
 }
 
-function ServiceCard({ service, index }) {
+function ServiceCard({
+  service,
+  index
+}:{
+  service:any;
+  index:number;
+}) {
   const [ref,on]=useSectionReveal();
   const [hov,setHov]=useState(false);
   return (
     <div ref={ref} className={`tp-svc-card${on?" tp-svc-in":""}`}
-      style={{"--delay":`${index*0.08}s`}}
+      style={
+  {
+    "--delay": `${index * 0.08}s`
+  } as CSSProperties
+}
       onMouseEnter={()=>setHov(true)} onMouseLeave={()=>setHov(false)}>
       <span className="tp-svc-icon">{service.icon}</span>
       <div className="tp-svc-num">0{index+1}</div>
@@ -437,7 +502,13 @@ function ServiceCard({ service, index }) {
   );
 }
 
-function ProjectCard({ project, onOpen }) {
+function ProjectCard({
+  project,
+  onOpen
+}:{
+  project:any;
+  onOpen:any;
+}) {
   const ref=useRef(null); useCardTilt(ref);
   return (
     <div ref={ref} className="tp-card" onClick={()=>onOpen(project)}>
@@ -451,9 +522,15 @@ function ProjectCard({ project, onOpen }) {
   );
 }
 
-function Modal({ project, onClose }) {
+function Modal({
+  project,
+  onClose
+}:{
+  project:any;
+  onClose:any;
+}) {
   useEffect(()=>{
-    const fn=(e)=>{if(e.key==="Escape")onClose();};
+    const fn=(e: KeyboardEvent)=>{if(e.key==="Escape")onClose();};
     window.addEventListener("keydown",fn);
     return()=>window.removeEventListener("keydown",fn);
   },[onClose]);
@@ -484,11 +561,11 @@ export default function TabrezPashaN() {
   const neuralRef=useRef(null);
   const heroBoxRef=useRef(null);
   const ambientRef=useRef(null);
-  const sphereRefs=useRef([]);
-  const techRefs=useRef([]);
+  const sphereRefs = useRef<(HTMLImageElement | null)[]>([]);
+  const techRefs = useRef<(HTMLDivElement | null)[]>([]);
   const centerRef=useRef(null);
-  const nodeRefs=useRef([]);
-  const cardRefs=useRef([]);
+  const nodeRefs = useRef<(HTMLDivElement | null)[]>([]);
+  const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
   const headingRef=useRef(null);
   const [modal,setModal]=useState(null);
   const [headingOn,setHeadingOn]=useState(false);
@@ -526,12 +603,16 @@ export default function TabrezPashaN() {
         <section className="tp-hero" id="hero">
           <div ref={ambientRef} className="tp-ambient"/>
           {[0,1,2].map(i=>(
-            <img key={i} ref={el=>sphereRefs.current[i]=el}
+            <img key={i} ref={(el) => {
+  sphereRefs.current[i] = el;
+}}
               src="/portfolio/assets/sphere.png" alt=""
               className={`tp-sphere tp-sphere-${i}`}/>
           ))}
           {TECH.map((t,i)=>(
-            <div key={t} ref={el=>techRefs.current[i]=el}
+            <div key={t} ref={(el) => {
+  techRefs.current[i] = el;
+}}
               className={`tp-tech tp-tech-${i}`}>{t}</div>
           ))}
 
@@ -554,7 +635,9 @@ export default function TabrezPashaN() {
                 <div ref={centerRef} className="tp-orbit-center">CORE SYSTEMS</div>
                 <div className="tp-orbit">
                   {ORBIT_LABELS.map((label,i)=>(
-                    <div key={label} ref={el=>nodeRefs.current[i]=el}
+                    <div key={label} ref={(el) => {
+  nodeRefs.current[i] = el;
+}}
                       className="tp-orbit-node"
                       style={{transform:`rotate(${i*60}deg) translate(110px) rotate(${-(i*60)}deg) translate(-50%,-50%)`}}>
                       <span style={{animation:"tp-counter-spin 30s linear infinite",display:"block",fontSize:"clamp(7px,1vw,9px)",color:"#cbd5f5"}}>
@@ -640,7 +723,9 @@ export default function TabrezPashaN() {
           <SectionHead label="03" title="Systems I've Engineered"/>
           <div className="tp-grid">
             {PROJECTS.map((p,i)=>(
-              <div key={p.title} ref={el=>cardRefs.current[i]=el} className="tp-card-wrap">
+              <div key={p.title} ref={(el) => {
+  cardRefs.current[i] = el;
+}} className="tp-card-wrap">
                 <ProjectCard project={p} onOpen={setModal}/>
               </div>
             ))}
@@ -664,7 +749,11 @@ export default function TabrezPashaN() {
       <div
         key={w.step}
         className="tp-flow-card"
-        style={{"--delay":`${i*0.08}s`}}
+        style={
+  {
+    "--delay": `${i * 0.08}s`
+  } as CSSProperties
+}
       >
         <div className="tp-flow-step">{w.step}</div>
 

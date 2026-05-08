@@ -50,12 +50,11 @@ export default function RootLayout({
         <meta name="google-site-verification" content="IcD05c8vuYmLOCR2mmBfBVafUpOJkocYqBoQ2Qev7yY" />
 
         {/* ================= AdSense ================= */}
-        <Script
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3475208521286310"
-          crossOrigin="anonymous"
-          strategy="afterInteractive"
-        />
+        <script
+        async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3475208521286310"
+        crossOrigin="anonymous"
+      />
 
         {/* ================= Google Analytics ================= */}
         <Script
