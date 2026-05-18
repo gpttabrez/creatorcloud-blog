@@ -22,7 +22,8 @@ import {
   FaYoutube,
   FaThreads,
   FaWhatsapp,
-  FaPhone
+  FaPhone,
+  FaTelegram
 } from "react-icons/fa6";
 
 import { MdEmail } from "react-icons/md";
@@ -155,6 +156,12 @@ const SOCIALS = [
   icon:<FaWhatsapp />,
   label:"WhatsApp",
   url:"https://wa.me/919738841367?text=Hi%20Tabrez,%20I%20want%20to%20discuss%20a%20project"
+  },
+
+  {
+  icon:<FaTelegram />,
+  label:"Telegram",
+  url:"https://t.me/tabrezcreator"
   },
 
   {
