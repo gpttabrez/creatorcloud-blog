@@ -67,7 +67,12 @@ const SKILLS = [
 
 const SERVICES = [
   { icon:<Smartphone className="tp-glow-icon" size={24} />, color:"#60a5fa",title:"Android App Development",  desc:"Full-cycle Android apps in Java/Kotlin — Firebase, maps, payments, Play Store deployment. I've shipped apps with real users." },
-  { icon:<Globe className="tp-glow-icon" size={24} />, color:"#22d3ee",title:"Web & SaaS Development",   desc:"React-based web apps, SaaS platforms with auth, usage limits, payments, and dashboards. CreatorCloud is a live example." },
+  { 
+  icon:<Globe className="tp-glow-icon" size={24} />, 
+  color:"#22d3ee",
+  title:"Website Design & Development",
+  desc:"Modern responsive websites, landing pages, business dashboards, SaaS platforms, and custom web solutions using React, HTML, CSS, JavaScript, Firebase, and API integrations." 
+},
   { icon:<Bot className="tp-glow-icon" size={24} />, color:"#a78bfa",title:"AI Integration",           desc:"Wire GPT, Groq, or custom AI models into your product — chatbots, assistants, memory systems, avatar pipelines." },
   { icon:<Settings className="tp-glow-icon" size={24} />, color:"#fb923c",title:"Business Automation",      desc:"Automate WhatsApp, email, social media, Discord workflows, and internal processes so your team focuses on what matters." },
   { icon:<TrendingUp className="tp-glow-icon" size={24} />, color:"#4ade80",title:"Trading Systems",          desc:"Automated trading bots with signal detection, multi-timeframe analysis, cross-exchange arbitrage, and real-time execution." },
