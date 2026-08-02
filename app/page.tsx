@@ -97,7 +97,7 @@ export default function Page() {
           </div>
 
           <div className="p-4 bg-white/5 border border-white/10 rounded-lg text-center">
-            🚀 Creator Growth
+           Creator Growth
           </div>
 
         </div>

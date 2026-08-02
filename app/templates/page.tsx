@@ -60,7 +60,7 @@ export default function TemplatesPage() {
         {/* COMING SOON */}
         <div className="mt-12 p-10 text-center bg-white/5 border border-white/10 rounded-xl">
           <h2 className="text-2xl font-semibold text-cyan-300">
-            🚀 Templates Store Launching Soon
+           Templates Store Launching Soon
           </h2>
 
           <p className="mt-3 text-gray-300">

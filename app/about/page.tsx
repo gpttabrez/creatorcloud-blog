@@ -82,7 +82,7 @@ export default function Page() {
           </article>
 
           <article className="bg-white/5 border border-white/10 rounded-xl p-6 shadow-[0_0_50px_rgba(236,72,153,0.4)]">
-            <h2 className="text-2xl font-semibold text-pink-400">🚀 Vision & Roadmap</h2>
+            <h2 className="text-2xl font-semibold text-pink-400">Vision & Roadmap</h2>
             <p className="mt-3 text-gray-300">
               Next upgrades: <strong>Batch compression, presets, PRO automations,
               cloud storage, workflow chaining.</strong>
