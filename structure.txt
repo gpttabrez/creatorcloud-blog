@@ -57,7 +57,6 @@ E:.
 |   |       
 |   +---dev
 |   |   |   build-manifest.json
-|   |   |   fallback-build-manifest.json
 |   |   |   package.json
 |   |   |   prerender-manifest.json
 |   |   |   react-loadable-manifest.json
@@ -155,7 +154,6 @@ E:.
 |   |   |   |   server-reference-manifest.js
 |   |   |   |   server-reference-manifest.json
 |   |   |   |   webpack-runtime.js
-|   |   |   |   _error.js
 |   |   |   |   
 |   |   |   +---app
 |   |   |   |   |   page.js
@@ -165,11 +163,6 @@ E:.
 |   |   |   |           page.js
 |   |   |   |           page_client-reference-manifest.js
 |   |   |   |           
-|   |   |   +---pages
-|   |   |   |       _app.js
-|   |   |   |       _document.js
-|   |   |   |       _error.js
-|   |   |   |       
 |   |   |   \---vendor-chunks
 |   |   |           @swc.js
 |   |   |           lucide-react.js
@@ -180,40 +173,18 @@ E:.
 |   |   |   +---chunks
 |   |   |   |   |   app-pages-internals.js
 |   |   |   |   |   main-app.js
-|   |   |   |   |   main.js
 |   |   |   |   |   polyfills.js
-|   |   |   |   |   react-refresh.js
 |   |   |   |   |   webpack.js
 |   |   |   |   |   _app-pages-browser_node_modules_next_dist_client_dev_noop-turbopack-hmr_js.js
-|   |   |   |   |   _error.js
-|   |   |   |   |   _pages-dir-browser_node_modules_next_dist_pages__app_js.js
-|   |   |   |   |   _pages-dir-browser_node_modules_next_dist_pages__error_js.js
 |   |   |   |   |   
-|   |   |   |   +---app
-|   |   |   |   |   |   layout.js
-|   |   |   |   |   |   page.js
-|   |   |   |   |   |   
-|   |   |   |   |   \---tabrez-pasha-n
-|   |   |   |   |           layout.js
-|   |   |   |   |           page.js
-|   |   |   |   |           
-|   |   |   |   +---fallback
-|   |   |   |   |   |   main-app.js
-|   |   |   |   |   |   main.js
-|   |   |   |   |   |   react-refresh.js
-|   |   |   |   |   |   webpack.js
-|   |   |   |   |   |   _app-pages-browser_node_modules_next_dist_client_dev_noop-turbopack-hmr_js.js
-|   |   |   |   |   |   _pages-dir-browser_node_modules_next_dist_pages__app_js.js
-|   |   |   |   |   |   _pages-dir-browser_node_modules_next_dist_pages__error_js.js
-|   |   |   |   |   |   
-|   |   |   |   |   \---pages
-|   |   |   |   |           _app.js
-|   |   |   |   |           _error.js
-|   |   |   |   |           
-|   |   |   |   \---pages
-|   |   |   |           _app.js
-|   |   |   |           _error.js
-|   |   |   |           
+|   |   |   |   \---app
+|   |   |   |       |   layout.js
+|   |   |   |       |   page.js
+|   |   |   |       |   
+|   |   |   |       \---tabrez-pasha-n
+|   |   |   |               layout.js
+|   |   |   |               page.js
+|   |   |   |               
 |   |   |   +---css
 |   |   |   |   \---app
 |   |   |   |           layout.css
@@ -223,256 +194,13 @@ E:.
 |   |   |   |       _ssgManifest.js
 |   |   |   |       
 |   |   |   \---webpack
-|   |   |       |   10d1069952d7bcba.webpack.hot-update.json
-|   |   |       |   171e675aa11bc2cd.webpack.hot-update.json
-|   |   |       |   1e5d4ff31fc480cc.webpack.hot-update.json
-|   |   |       |   212972ae1f461e9f.webpack.hot-update.json
-|   |   |       |   2212e710177e3b10.webpack.hot-update.json
-|   |   |       |   226a845dfd53e6e2.webpack.hot-update.json
-|   |   |       |   295000186ec5491f.webpack.hot-update.json
-|   |   |       |   2ae65599da44da8d.webpack.hot-update.json
-|   |   |       |   2ce81966589c32bc.webpack.hot-update.json
-|   |   |       |   316fc3995f2ee977.webpack.hot-update.json
-|   |   |       |   34d57bca57c3cbbe.webpack.hot-update.json
-|   |   |       |   3557d7c3c1010317.webpack.hot-update.json
-|   |   |       |   37a40a73564ca151.webpack.hot-update.json
-|   |   |       |   3831f28063ff96e1.webpack.hot-update.json
-|   |   |       |   3be55ff6ad200028.webpack.hot-update.json
-|   |   |       |   3e3654c63e7d73e0.webpack.hot-update.json
-|   |   |       |   4a8c8779a3165f2a.webpack.hot-update.json
-|   |   |       |   4e7b0388fd770ec2.webpack.hot-update.json
-|   |   |       |   554d71d5e8c92765.webpack.hot-update.json
 |   |   |       |   633457081244afec._.hot-update.json
-|   |   |       |   69826daf2fe8f8c7.webpack.hot-update.json
-|   |   |       |   6a1a5383fd94264d.webpack.hot-update.json
-|   |   |       |   6a5a8eac778c2007.webpack.hot-update.json
-|   |   |       |   6f5563087b078a41.webpack.hot-update.json
-|   |   |       |   73fbcdde25bac300.webpack.hot-update.json
-|   |   |       |   791f6643060a8a69.webpack.hot-update.json
-|   |   |       |   7975ca61d213786c.webpack.hot-update.json
-|   |   |       |   7ec0ed5a41f076fb.webpack.hot-update.json
-|   |   |       |   7f56db56c23f3488.webpack.hot-update.json
-|   |   |       |   85acc673bf01c7f3.webpack.hot-update.json
-|   |   |       |   899696f795bc3304.webpack.hot-update.json
-|   |   |       |   89c22ef509ba6dde.webpack.hot-update.json
-|   |   |       |   8a5874d599865890.webpack.hot-update.json
-|   |   |       |   95e6322316dad67d.webpack.hot-update.json
-|   |   |       |   9b9350ec4cd3c124.webpack.hot-update.json
-|   |   |       |   9eaa73105f9235e0.webpack.hot-update.json
-|   |   |       |   a8cebc7d4ce2da33.webpack.hot-update.json
-|   |   |       |   a97c36e94828a51b.webpack.hot-update.json
-|   |   |       |   aa880e34541de506.webpack.hot-update.json
-|   |   |       |   aab5993d574577fa.webpack.hot-update.json
-|   |   |       |   ab3115d77b6b3fcb.webpack.hot-update.json
-|   |   |       |   ade9bb58a931a587.webpack.hot-update.json
-|   |   |       |   ae83893436effef4.webpack.hot-update.json
-|   |   |       |   b0b5b8763bf7b2d5.webpack.hot-update.json
-|   |   |       |   b3dff063fff689cb.webpack.hot-update.json
-|   |   |       |   b9e10ee1b5dc6997.webpack.hot-update.json
-|   |   |       |   bd4e78cb7121a15c.webpack.hot-update.json
-|   |   |       |   be79427877e598c6.webpack.hot-update.json
-|   |   |       |   bec0917c11e118bd.webpack.hot-update.json
-|   |   |       |   bffa4778ef7f605e.webpack.hot-update.json
-|   |   |       |   c40dfef6b5bc6117.webpack.hot-update.json
-|   |   |       |   c78be257df5249d2.webpack.hot-update.json
-|   |   |       |   ca24e4e077228052.webpack.hot-update.json
-|   |   |       |   cd9a00bcdeb15e9a.webpack.hot-update.json
-|   |   |       |   cf1396363ee08390.webpack.hot-update.json
-|   |   |       |   d0c5473970e6d9d9.webpack.hot-update.json
-|   |   |       |   d77d6b3e73624737.webpack.hot-update.json
-|   |   |       |   d790ec016981d6bd.webpack.hot-update.json
-|   |   |       |   daeffda1466d4ff9.webpack.hot-update.json
-|   |   |       |   dbba0ad1cc352a4e.webpack.hot-update.json
-|   |   |       |   e6a267c0b40ee23a.webpack.hot-update.json
-|   |   |       |   ecba6cffea2f97b9.webpack.hot-update.json
-|   |   |       |   f582e5f54295ed51.webpack.hot-update.json
-|   |   |       |   f6dd6a08873f8579.webpack.hot-update.json
-|   |   |       |   fa686288c2e5cb33.webpack.hot-update.json
-|   |   |       |   fbe822c7b083c44e.webpack.hot-update.json
-|   |   |       |   webpack.10d1069952d7bcba.hot-update.js
-|   |   |       |   webpack.171e675aa11bc2cd.hot-update.js
-|   |   |       |   webpack.1e5d4ff31fc480cc.hot-update.js
-|   |   |       |   webpack.212972ae1f461e9f.hot-update.js
-|   |   |       |   webpack.2212e710177e3b10.hot-update.js
-|   |   |       |   webpack.226a845dfd53e6e2.hot-update.js
-|   |   |       |   webpack.295000186ec5491f.hot-update.js
-|   |   |       |   webpack.2ae65599da44da8d.hot-update.js
-|   |   |       |   webpack.2ce81966589c32bc.hot-update.js
-|   |   |       |   webpack.316fc3995f2ee977.hot-update.js
-|   |   |       |   webpack.34d57bca57c3cbbe.hot-update.js
-|   |   |       |   webpack.3557d7c3c1010317.hot-update.js
-|   |   |       |   webpack.37a40a73564ca151.hot-update.js
-|   |   |       |   webpack.3831f28063ff96e1.hot-update.js
-|   |   |       |   webpack.3be55ff6ad200028.hot-update.js
-|   |   |       |   webpack.3e3654c63e7d73e0.hot-update.js
-|   |   |       |   webpack.4a8c8779a3165f2a.hot-update.js
-|   |   |       |   webpack.4e7b0388fd770ec2.hot-update.js
-|   |   |       |   webpack.554d71d5e8c92765.hot-update.js
-|   |   |       |   webpack.69826daf2fe8f8c7.hot-update.js
-|   |   |       |   webpack.6a1a5383fd94264d.hot-update.js
-|   |   |       |   webpack.6a5a8eac778c2007.hot-update.js
-|   |   |       |   webpack.6f5563087b078a41.hot-update.js
-|   |   |       |   webpack.73fbcdde25bac300.hot-update.js
-|   |   |       |   webpack.791f6643060a8a69.hot-update.js
-|   |   |       |   webpack.7975ca61d213786c.hot-update.js
-|   |   |       |   webpack.7ec0ed5a41f076fb.hot-update.js
-|   |   |       |   webpack.7f56db56c23f3488.hot-update.js
-|   |   |       |   webpack.85acc673bf01c7f3.hot-update.js
-|   |   |       |   webpack.899696f795bc3304.hot-update.js
-|   |   |       |   webpack.89c22ef509ba6dde.hot-update.js
-|   |   |       |   webpack.8a5874d599865890.hot-update.js
-|   |   |       |   webpack.95e6322316dad67d.hot-update.js
-|   |   |       |   webpack.9b9350ec4cd3c124.hot-update.js
-|   |   |       |   webpack.9eaa73105f9235e0.hot-update.js
-|   |   |       |   webpack.a8cebc7d4ce2da33.hot-update.js
-|   |   |       |   webpack.a97c36e94828a51b.hot-update.js
-|   |   |       |   webpack.aa880e34541de506.hot-update.js
-|   |   |       |   webpack.aab5993d574577fa.hot-update.js
-|   |   |       |   webpack.ab3115d77b6b3fcb.hot-update.js
-|   |   |       |   webpack.ade9bb58a931a587.hot-update.js
-|   |   |       |   webpack.ae83893436effef4.hot-update.js
-|   |   |       |   webpack.b0b5b8763bf7b2d5.hot-update.js
-|   |   |       |   webpack.b3dff063fff689cb.hot-update.js
-|   |   |       |   webpack.b9e10ee1b5dc6997.hot-update.js
-|   |   |       |   webpack.bd4e78cb7121a15c.hot-update.js
-|   |   |       |   webpack.be79427877e598c6.hot-update.js
-|   |   |       |   webpack.bec0917c11e118bd.hot-update.js
-|   |   |       |   webpack.bffa4778ef7f605e.hot-update.js
-|   |   |       |   webpack.c40dfef6b5bc6117.hot-update.js
-|   |   |       |   webpack.c78be257df5249d2.hot-update.js
-|   |   |       |   webpack.ca24e4e077228052.hot-update.js
-|   |   |       |   webpack.cd9a00bcdeb15e9a.hot-update.js
-|   |   |       |   webpack.cf1396363ee08390.hot-update.js
-|   |   |       |   webpack.d0c5473970e6d9d9.hot-update.js
-|   |   |       |   webpack.d77d6b3e73624737.hot-update.js
-|   |   |       |   webpack.d790ec016981d6bd.hot-update.js
-|   |   |       |   webpack.daeffda1466d4ff9.hot-update.js
-|   |   |       |   webpack.dbba0ad1cc352a4e.hot-update.js
-|   |   |       |   webpack.e6a267c0b40ee23a.hot-update.js
-|   |   |       |   webpack.ecba6cffea2f97b9.hot-update.js
-|   |   |       |   webpack.f582e5f54295ed51.hot-update.js
-|   |   |       |   webpack.f6dd6a08873f8579.hot-update.js
-|   |   |       |   webpack.fa686288c2e5cb33.hot-update.js
-|   |   |       |   webpack.fbe822c7b083c44e.hot-update.js
+|   |   |       |   a3a7dcebbfd97cb3.webpack.hot-update.json
+|   |   |       |   webpack.a3a7dcebbfd97cb3.hot-update.js
 |   |   |       |   
 |   |   |       \---app
-|   |   |           |   layout.10d1069952d7bcba.hot-update.js
-|   |   |           |   layout.171e675aa11bc2cd.hot-update.js
-|   |   |           |   layout.1e5d4ff31fc480cc.hot-update.js
-|   |   |           |   layout.212972ae1f461e9f.hot-update.js
-|   |   |           |   layout.2212e710177e3b10.hot-update.js
-|   |   |           |   layout.226a845dfd53e6e2.hot-update.js
-|   |   |           |   layout.295000186ec5491f.hot-update.js
-|   |   |           |   layout.2ae65599da44da8d.hot-update.js
-|   |   |           |   layout.2ce81966589c32bc.hot-update.js
-|   |   |           |   layout.34d57bca57c3cbbe.hot-update.js
-|   |   |           |   layout.3557d7c3c1010317.hot-update.js
-|   |   |           |   layout.3831f28063ff96e1.hot-update.js
-|   |   |           |   layout.3be55ff6ad200028.hot-update.js
-|   |   |           |   layout.3e3654c63e7d73e0.hot-update.js
-|   |   |           |   layout.4a8c8779a3165f2a.hot-update.js
-|   |   |           |   layout.4e7b0388fd770ec2.hot-update.js
-|   |   |           |   layout.554d71d5e8c92765.hot-update.js
-|   |   |           |   layout.69826daf2fe8f8c7.hot-update.js
-|   |   |           |   layout.6a1a5383fd94264d.hot-update.js
-|   |   |           |   layout.6a5a8eac778c2007.hot-update.js
-|   |   |           |   layout.6f5563087b078a41.hot-update.js
-|   |   |           |   layout.73fbcdde25bac300.hot-update.js
-|   |   |           |   layout.791f6643060a8a69.hot-update.js
-|   |   |           |   layout.7975ca61d213786c.hot-update.js
-|   |   |           |   layout.7ec0ed5a41f076fb.hot-update.js
-|   |   |           |   layout.7f56db56c23f3488.hot-update.js
-|   |   |           |   layout.85acc673bf01c7f3.hot-update.js
-|   |   |           |   layout.899696f795bc3304.hot-update.js
-|   |   |           |   layout.89c22ef509ba6dde.hot-update.js
-|   |   |           |   layout.8a5874d599865890.hot-update.js
-|   |   |           |   layout.95e6322316dad67d.hot-update.js
-|   |   |           |   layout.9b9350ec4cd3c124.hot-update.js
-|   |   |           |   layout.9eaa73105f9235e0.hot-update.js
-|   |   |           |   layout.a8cebc7d4ce2da33.hot-update.js
-|   |   |           |   layout.a97c36e94828a51b.hot-update.js
-|   |   |           |   layout.aa880e34541de506.hot-update.js
-|   |   |           |   layout.aab5993d574577fa.hot-update.js
-|   |   |           |   layout.ab3115d77b6b3fcb.hot-update.js
-|   |   |           |   layout.ade9bb58a931a587.hot-update.js
-|   |   |           |   layout.ae83893436effef4.hot-update.js
-|   |   |           |   layout.b0b5b8763bf7b2d5.hot-update.js
-|   |   |           |   layout.b3dff063fff689cb.hot-update.js
-|   |   |           |   layout.b9e10ee1b5dc6997.hot-update.js
-|   |   |           |   layout.bd4e78cb7121a15c.hot-update.js
-|   |   |           |   layout.be79427877e598c6.hot-update.js
-|   |   |           |   layout.bec0917c11e118bd.hot-update.js
-|   |   |           |   layout.bffa4778ef7f605e.hot-update.js
-|   |   |           |   layout.c40dfef6b5bc6117.hot-update.js
-|   |   |           |   layout.c78be257df5249d2.hot-update.js
-|   |   |           |   layout.ca24e4e077228052.hot-update.js
-|   |   |           |   layout.cd9a00bcdeb15e9a.hot-update.js
-|   |   |           |   layout.cf1396363ee08390.hot-update.js
-|   |   |           |   layout.d0c5473970e6d9d9.hot-update.js
-|   |   |           |   layout.d77d6b3e73624737.hot-update.js
-|   |   |           |   layout.d790ec016981d6bd.hot-update.js
-|   |   |           |   layout.daeffda1466d4ff9.hot-update.js
-|   |   |           |   layout.dbba0ad1cc352a4e.hot-update.js
-|   |   |           |   layout.ecba6cffea2f97b9.hot-update.js
-|   |   |           |   layout.f582e5f54295ed51.hot-update.js
-|   |   |           |   layout.f6dd6a08873f8579.hot-update.js
-|   |   |           |   layout.fa686288c2e5cb33.hot-update.js
-|   |   |           |   layout.fbe822c7b083c44e.hot-update.js
-|   |   |           |   
-|   |   |           \---tabrez-pasha-n
-|   |   |                   page.10d1069952d7bcba.hot-update.js
-|   |   |                   page.1e5d4ff31fc480cc.hot-update.js
-|   |   |                   page.212972ae1f461e9f.hot-update.js
-|   |   |                   page.2212e710177e3b10.hot-update.js
-|   |   |                   page.226a845dfd53e6e2.hot-update.js
-|   |   |                   page.295000186ec5491f.hot-update.js
-|   |   |                   page.2ae65599da44da8d.hot-update.js
-|   |   |                   page.2ce81966589c32bc.hot-update.js
-|   |   |                   page.316fc3995f2ee977.hot-update.js
-|   |   |                   page.34d57bca57c3cbbe.hot-update.js
-|   |   |                   page.3557d7c3c1010317.hot-update.js
-|   |   |                   page.3831f28063ff96e1.hot-update.js
-|   |   |                   page.3be55ff6ad200028.hot-update.js
-|   |   |                   page.3e3654c63e7d73e0.hot-update.js
-|   |   |                   page.4a8c8779a3165f2a.hot-update.js
-|   |   |                   page.4e7b0388fd770ec2.hot-update.js
-|   |   |                   page.554d71d5e8c92765.hot-update.js
-|   |   |                   page.69826daf2fe8f8c7.hot-update.js
-|   |   |                   page.6a1a5383fd94264d.hot-update.js
-|   |   |                   page.6a5a8eac778c2007.hot-update.js
-|   |   |                   page.73fbcdde25bac300.hot-update.js
-|   |   |                   page.791f6643060a8a69.hot-update.js
-|   |   |                   page.7975ca61d213786c.hot-update.js
-|   |   |                   page.7f56db56c23f3488.hot-update.js
-|   |   |                   page.85acc673bf01c7f3.hot-update.js
-|   |   |                   page.899696f795bc3304.hot-update.js
-|   |   |                   page.89c22ef509ba6dde.hot-update.js
-|   |   |                   page.9b9350ec4cd3c124.hot-update.js
-|   |   |                   page.a8cebc7d4ce2da33.hot-update.js
-|   |   |                   page.a97c36e94828a51b.hot-update.js
-|   |   |                   page.aa880e34541de506.hot-update.js
-|   |   |                   page.aab5993d574577fa.hot-update.js
-|   |   |                   page.ade9bb58a931a587.hot-update.js
-|   |   |                   page.ae83893436effef4.hot-update.js
-|   |   |                   page.b0b5b8763bf7b2d5.hot-update.js
-|   |   |                   page.b3dff063fff689cb.hot-update.js
-|   |   |                   page.b9e10ee1b5dc6997.hot-update.js
-|   |   |                   page.bd4e78cb7121a15c.hot-update.js
-|   |   |                   page.be79427877e598c6.hot-update.js
-|   |   |                   page.bec0917c11e118bd.hot-update.js
-|   |   |                   page.c40dfef6b5bc6117.hot-update.js
-|   |   |                   page.c78be257df5249d2.hot-update.js
-|   |   |                   page.ca24e4e077228052.hot-update.js
-|   |   |                   page.cf1396363ee08390.hot-update.js
-|   |   |                   page.daeffda1466d4ff9.hot-update.js
-|   |   |                   page.dbba0ad1cc352a4e.hot-update.js
-|   |   |                   page.e6a267c0b40ee23a.hot-update.js
-|   |   |                   page.ecba6cffea2f97b9.hot-update.js
-|   |   |                   page.f582e5f54295ed51.hot-update.js
-|   |   |                   page.f6dd6a08873f8579.hot-update.js
-|   |   |                   page.fa686288c2e5cb33.hot-update.js
-|   |   |                   page.fbe822c7b083c44e.hot-update.js
-|   |   |                   
+|   |   |               layout.a3a7dcebbfd97cb3.hot-update.js
+|   |   |               
 |   |   \---types
 |   |       |   cache-life.d.ts
 |   |       |   package.json
