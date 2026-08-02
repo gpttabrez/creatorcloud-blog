@@ -101,6 +101,9 @@ export default function RootLayout({
           content="IcD05c8vuYmLOCR2mmBfBVafUpOJkocYqBoQ2Qev7yY"
         />
 
+        {/* ✅ BING WEBMASTER TOOLS VERIFICATION */}
+        <meta name="msvalidate.01" content="2060CFCBACDFB923BE9B44BBC38CB436" />
+
         {/* RSS feed autodiscovery -- authored directly here rather than via
             metadata.alternates.types, because Next's metadata merging
             SHALLOW-REPLACES the whole `alternates` object on any child route
