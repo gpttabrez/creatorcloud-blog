@@ -15,12 +15,12 @@ export default function Footer() {
       </div>
 
       <p className="text-xs text-gray-500 mt-6">
-        CreatorCloud is owned and operated by{" "}
+        Creator Cloud is owned and operated by{" "}
         <span className="text-cyan-300">Advisory Mediacare Services</span>.
       </p>
 
       <p className="text-xs text-gray-500 mt-1">
-        © {new Date().getFullYear()} CreatorCloud
+        © {new Date().getFullYear()} Creator Cloud
       </p>
 
     </footer>

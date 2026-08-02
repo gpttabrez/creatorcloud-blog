@@ -3,7 +3,7 @@ import Footer from "@/app/components/Footer";
 import Link from "next/link";
 
 export const metadata = {
-  title: "Best AI Tools for Designers in 2026 | CreatorCloud",
+  title: "Best AI Tools for Designers in 2026 | Creator Cloud",
 
   description:
     "Discover the top AI tools for designers in 2026. Learn how AI is transforming design workflows with faster editing, automation, and creativity tools.",
@@ -16,7 +16,7 @@ export const metadata = {
     "Figma AI",
     "Midjourney",
     "Adobe Firefly",
-    "CreatorCloud",
+    "Creator Cloud",
     "design productivity tools",
   ],
 
@@ -39,7 +39,7 @@ export const metadata = {
     url:
       "https://blog.creatorcloud.in/blog/best-ai-tools-for-designers",
 
-    siteName: "CreatorCloud",
+    siteName: "Creator Cloud",
 
     images: [
       {
@@ -84,12 +84,12 @@ export default function Page() {
 
     author: {
       "@type": "Organization",
-      name: "CreatorCloud",
+      name: "Creator Cloud",
     },
 
     publisher: {
       "@type": "Organization",
-      name: "CreatorCloud",
+      name: "Creator Cloud",
 
       logo: {
         "@type": "ImageObject",
@@ -294,7 +294,7 @@ export default function Page() {
             </p>
 
             <h3 className="text-xl font-semibold mt-6">
-              10. CreatorCloud
+              10. Creator Cloud
             </h3>
 
             <p>
@@ -375,7 +375,7 @@ export default function Page() {
               </h3>
 
               <p className="text-gray-300 mb-4">
-                Use CreatorCloud tools to compress and optimize your assets
+                Use Creator Cloud tools to compress and optimize your assets
                 before publishing.
               </p>
 

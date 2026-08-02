@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export const metadata = {
   title:
-    "MP4 to MP3 Conversion Guide in 2026 | CreatorCloud",
+    "MP4 to MP3 Conversion Guide in 2026 | Creator Cloud",
 
   description:
     "Learn how to convert MP4 to MP3 in 2026. Extract high-quality audio from videos using fast and efficient tools.",
@@ -15,7 +15,7 @@ export const metadata = {
     "extract audio from video",
     "MP3 conversion",
     "audio extraction",
-    "CreatorCloud",
+    "Creator Cloud",
     "convert video to MP3",
     "online MP3 converter",
     "high quality audio extraction",
@@ -41,7 +41,7 @@ export const metadata = {
     url:
       "https://blog.creatorcloud.in/blog/mp4-to-mp3-conversion",
 
-    siteName: "CreatorCloud",
+    siteName: "Creator Cloud",
 
     images: [
       {
@@ -92,12 +92,12 @@ export default function Page() {
 
     author: {
       "@type": "Organization",
-      name: "CreatorCloud",
+      name: "Creator Cloud",
     },
 
     publisher: {
       "@type": "Organization",
-      name: "CreatorCloud",
+      name: "Creator Cloud",
 
       logo: {
         "@type": "ImageObject",
@@ -302,7 +302,7 @@ export default function Page() {
 
             <ul className="list-disc ml-6">
               <li>
-                CreatorCloud – fast online conversion with high quality
+                Creator Cloud – fast online conversion with high quality
               </li>
 
               <li>
@@ -398,7 +398,7 @@ export default function Page() {
 
               <p className="text-gray-300 mb-4">
                 Convert your videos into high-quality MP3 instantly using
-                CreatorCloud.
+                Creator Cloud.
               </p>
 
               <div className="flex flex-wrap gap-3">

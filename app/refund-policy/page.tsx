@@ -2,16 +2,25 @@ import type { Metadata } from "next";
 import Footer from "../components/Footer";
 
 export const metadata: Metadata = {
-  title: "Refund & Payment Policy – CreatorCloud",
+  title: "Refund & Payment Policy – Creator Cloud",
   description:
-    "Refund policy for CreatorCloud subscriptions. Transparent billing, trials, and fair refund terms.",
+    "Refund policy for Creator Cloud subscriptions. Transparent billing, trials, and fair refund terms.",
   authors: [{ name: "Advisory Mediacare Services" }],
+  alternates: {
+    canonical: "https://blog.creatorcloud.in/refund-policy",
+  },
   openGraph: {
-    title: "CreatorCloud Refund Policy",
+    title: "Creator Cloud Refund Policy",
     description:
-      "Transparent billing, trial, and refund terms for CreatorCloud services.",
+      "Transparent billing, trial, and refund terms for Creator Cloud services.",
     url: "https://blog.creatorcloud.in/refund-policy",
-    siteName: "CreatorCloud",
+    siteName: "Creator Cloud",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Creator Cloud Refund Policy",
+    description:
+      "Transparent billing, trial, and refund terms for Creator Cloud services.",
   },
 };
 
@@ -26,7 +35,7 @@ export default function Page() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "RefundPolicy",
-            name: "CreatorCloud Refund Policy",
+            name: "Creator Cloud Refund Policy",
             url: "https://blog.creatorcloud.in/refund-policy",
             publisher: {
               "@type": "Organization",
@@ -59,7 +68,7 @@ export default function Page() {
           <p className="font-medium text-cyan-300">Legal & Company</p>
 
           <p className="mt-2">
-            CreatorCloud is owned and operated by{" "}
+            Creator Cloud is owned and operated by{" "}
             <strong>Advisory Mediacare Services</strong>.
             Registered Business Name: Advisory Mediacare Services.
           </p>
@@ -78,7 +87,7 @@ export default function Page() {
           1. Overview
         </h2>
         <p className="mt-2">
-          CreatorCloud Pro will include advanced features such as batch processing, AI speed boost,
+          Creator Cloud Pro will include advanced features such as batch processing, AI speed boost,
           cloud save & workflow automations. Payments activate only after premium release.
         </p>
 

@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Footer from "../components/Footer";
 
 export const metadata: Metadata = {
-  title: "About CreatorCloud – Fast Video Compress, PDF Tools, MP3 Convert",
+  title: "About Creator Cloud – Fast Video Compress, PDF Tools, MP3 Convert",
   description:
-    "CreatorCloud is a privacy-first file processing suite. Compress videos, extract MP3, convert images, merge PDFs – fast, no watermark.",
+    "Creator Cloud is a privacy-first file processing suite. Compress videos, extract MP3, convert images, merge PDFs – fast, no watermark.",
   keywords: [
     "creatorcloud",
     "online video compressor",
@@ -14,31 +14,56 @@ export const metadata: Metadata = {
     "image tools",
   ],
   authors: [{ name: "Advisory Mediacare Services" }],
+  alternates: {
+    canonical: "https://blog.creatorcloud.in/about",
+  },
   openGraph: {
-    title: "About CreatorCloud",
+    title: "About Creator Cloud",
     description:
       "A lightning-fast cloud toolkit for creators. Compress, convert, merge, extract instantly.",
     url: "https://blog.creatorcloud.in/about",
-    siteName: "CreatorCloud",
+    siteName: "Creator Cloud",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "About Creator Cloud",
+    description:
+      "A lightning-fast cloud toolkit for creators. Compress, convert, merge, extract instantly.",
+  },
+};
+
+const aboutSchema = {
+  "@context": "https://schema.org",
+  "@type": "AboutPage",
+  name: "About Creator Cloud",
+  url: "https://blog.creatorcloud.in/about",
+  isPartOf: {
+    "@type": "WebSite",
+    name: "Creator Cloud Blog",
+    url: "https://blog.creatorcloud.in",
   },
 };
 
 export default function Page() {
   return (
     <main className="min-h-screen bg-[#050816] text-gray-100">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutSchema) }}
+      />
 
       {/* ========================== PAGE CONTENT =========================== */}
       <section className="max-w-6xl mx-auto px-6 py-20">
 
         <h1 className="text-4xl md:text-5xl font-extrabold leading-tight">
           <span className="bg-gradient-to-r from-cyan-400 via-fuchsia-500 to-purple-500 bg-clip-text text-transparent">
-            CreatorCloud
+            Creator Cloud
           </span>{" "}
           – Fast, Simple, Creator-Friendly Tools
         </h1>
 
         <p className="mt-4 text-gray-300 text-lg leading-relaxed">
-          CreatorCloud is an <strong>all-in-one online compression & conversion toolkit</strong>{" "}
+          Creator Cloud is an <strong>all-in-one online compression & conversion toolkit</strong>{" "}
           for creators and everyday users. No install, no watermark — pure speed.
         </p>
 
@@ -82,7 +107,7 @@ export default function Page() {
           <p className="font-medium text-cyan-300">Legal & Company</p>
 
           <p className="mt-2">
-            CreatorCloud is owned and operated by <strong>Advisory Mediacare Services</strong>.
+            Creator Cloud is owned and operated by <strong>Advisory Mediacare Services</strong>.
             Registered Business Name: Advisory Mediacare Services.
           </p>
 
@@ -115,7 +140,7 @@ export default function Page() {
           rel="noopener noreferrer"
           className="px-5 py-2 bg-white/10 rounded-lg"
         >
-          Use CreatorCloud Tools →
+          Use Creator Cloud Tools →
         </a>
       </div>
 

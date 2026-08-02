@@ -1,21 +1,46 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Disclaimer – CreatorCloud",
+  title: "Disclaimer – Creator Cloud",
   description:
-    "Read the disclaimer for CreatorCloud. Information, tools, and content are provided for general use without guarantees.",
+    "Read the disclaimer for Creator Cloud. Information, tools, and content are provided for general use without guarantees.",
+  alternates: {
+    canonical: "https://blog.creatorcloud.in/disclaimer",
+  },
   openGraph: {
-    title: "CreatorCloud Disclaimer",
+    title: "Creator Cloud Disclaimer",
     description:
-      "Understand the limitations and responsibilities when using CreatorCloud tools and content.",
+      "Understand the limitations and responsibilities when using Creator Cloud tools and content.",
     url: "https://blog.creatorcloud.in/disclaimer",
-    siteName: "CreatorCloud",
+    siteName: "Creator Cloud",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Creator Cloud Disclaimer",
+    description:
+      "Understand the limitations and responsibilities when using Creator Cloud tools and content.",
+  },
+};
+
+const disclaimerSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  name: "Creator Cloud Disclaimer",
+  url: "https://blog.creatorcloud.in/disclaimer",
+  isPartOf: {
+    "@type": "WebSite",
+    name: "Creator Cloud Blog",
+    url: "https://blog.creatorcloud.in",
   },
 };
 
 export default function DisclaimerPage() {
   return (
     <main className="min-h-screen bg-[#050816] text-gray-100">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(disclaimerSchema) }}
+      />
 
       <section className="max-w-4xl mx-auto px-6 py-20">
 
@@ -24,21 +49,21 @@ export default function DisclaimerPage() {
         </h1>
 
         <p className="text-gray-300 mb-6">
-          The information and tools provided on CreatorCloud are for general informational
+          The information and tools provided on Creator Cloud are for general informational
           and utility purposes only. By using this website, you agree to the terms outlined in this disclaimer.
         </p>
 
         {/* GENERAL INFO */}
         <h2 className="text-2xl font-semibold mt-8 mb-3">General Information</h2>
         <p className="text-gray-300">
-          All content, tools, and resources available on CreatorCloud are provided “as is”
+          All content, tools, and resources available on Creator Cloud are provided “as is”
           without any guarantees of accuracy, reliability, or completeness.
         </p>
 
         {/* NO PROFESSIONAL ADVICE */}
         <h2 className="text-2xl font-semibold mt-8 mb-3">No Professional Advice</h2>
         <p className="text-gray-300">
-          CreatorCloud does not provide legal, financial, or professional advice.
+          Creator Cloud does not provide legal, financial, or professional advice.
           Any decisions made based on the content or tools are at your own risk.
         </p>
 
@@ -59,7 +84,7 @@ export default function DisclaimerPage() {
         {/* LIMITATION */}
         <h2 className="text-2xl font-semibold mt-8 mb-3">Limitation of Liability</h2>
         <p className="text-gray-300">
-          CreatorCloud and its operators are not liable for any losses, damages,
+          Creator Cloud and its operators are not liable for any losses, damages,
           or issues arising from the use of our tools or content.
         </p>
 

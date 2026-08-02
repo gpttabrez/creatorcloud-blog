@@ -1,4 +1,27 @@
 User-agent: *
 Allow: /
 
+# Explicit allow for common AI assistant / AI search crawlers -- "User-agent: *"
+# above already covers them, these are listed for clarity.
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
 Sitemap: https://blog.creatorcloud.in/sitemap.xml

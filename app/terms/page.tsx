@@ -2,16 +2,25 @@ import type { Metadata } from "next";
 import Footer from "../components/Footer";
 
 export const metadata: Metadata = {
-  title: "Terms & Conditions – CreatorCloud",
+  title: "Terms & Conditions – Creator Cloud",
   description:
-    "CreatorCloud Terms of Use — guidelines, limits, liabilities, file handling, and policy for conversion & compression tools.",
+    "Creator Cloud Terms of Use — guidelines, limits, liabilities, file handling, and policy for conversion & compression tools.",
   authors: [{ name: "Advisory Mediacare Services" }],
+  alternates: {
+    canonical: "https://blog.creatorcloud.in/terms",
+  },
   openGraph: {
-    title: "CreatorCloud Terms & Conditions",
+    title: "Creator Cloud Terms & Conditions",
     description:
-      "Guidelines, limits, liabilities, and usage rules for CreatorCloud tools.",
+      "Guidelines, limits, liabilities, and usage rules for Creator Cloud tools.",
     url: "https://blog.creatorcloud.in/terms",
-    siteName: "CreatorCloud",
+    siteName: "Creator Cloud",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Creator Cloud Terms & Conditions",
+    description:
+      "Guidelines, limits, liabilities, and usage rules for Creator Cloud tools.",
   },
 };
 
@@ -26,7 +35,7 @@ export default function Page() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "TermsOfService",
-            name: "CreatorCloud Terms & Conditions",
+            name: "Creator Cloud Terms & Conditions",
             url: "https://blog.creatorcloud.in/terms",
             publisher: {
               "@type": "Organization",
@@ -59,7 +68,7 @@ export default function Page() {
           <p className="font-medium text-cyan-300">Legal & Company</p>
 
           <p className="mt-2">
-            CreatorCloud is owned and operated by{" "}
+            Creator Cloud is owned and operated by{" "}
             <strong>Advisory Mediacare Services</strong>.
             Registered Business Name: Advisory Mediacare Services.
           </p>
@@ -78,7 +87,7 @@ export default function Page() {
           1. Acceptance of Terms
         </h2>
         <p className="mt-2">
-          By using CreatorCloud, you agree to follow all terms in this document.
+          By using Creator Cloud, you agree to follow all terms in this document.
           If you disagree, please stop using the service immediately.
         </p>
 
@@ -116,7 +125,7 @@ export default function Page() {
           4. Liability Disclaimer
         </h2>
         <p className="mt-2">
-          CreatorCloud is provided “as-is”. We are not responsible for delays,
+          Creator Cloud is provided “as-is”. We are not responsible for delays,
           corrupted output, network/server issues, or user-side errors.
         </p>
 

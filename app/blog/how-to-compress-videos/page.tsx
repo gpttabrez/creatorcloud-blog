@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export const metadata = {
   title:
-    "How to Compress Videos Without Losing Quality in 2026 | CreatorCloud",
+    "How to Compress Videos Without Losing Quality in 2026 | Creator Cloud",
 
   description:
     "Learn how to compress videos without losing quality in 2026 using modern codecs, bitrate optimization, and smart tools for faster uploads.",
@@ -16,7 +16,7 @@ export const metadata = {
     "compress video without quality loss",
     "H265 compression",
     "AV1 codec",
-    "CreatorCloud",
+    "Creator Cloud",
     "video bitrate optimization",
   ],
 
@@ -40,7 +40,7 @@ export const metadata = {
     url:
       "https://blog.creatorcloud.in/blog/how-to-compress-videos",
 
-    siteName: "CreatorCloud",
+    siteName: "Creator Cloud",
 
     images: [
       {
@@ -91,12 +91,12 @@ export default function Page() {
 
     author: {
       "@type": "Organization",
-      name: "CreatorCloud",
+      name: "Creator Cloud",
     },
 
     publisher: {
       "@type": "Organization",
-      name: "CreatorCloud",
+      name: "Creator Cloud",
 
       logo: {
         "@type": "ImageObject",
@@ -276,7 +276,7 @@ export default function Page() {
         </h2>
 
         <ul className="list-disc ml-6 space-y-2 text-gray-300">
-          <li>CreatorCloud – fast online compression</li>
+          <li>Creator Cloud – fast online compression</li>
 
           <li>HandBrake – advanced desktop control</li>
 
@@ -350,7 +350,7 @@ export default function Page() {
           </h3>
 
           <p className="text-gray-300 mb-4">
-            Use CreatorCloud to reduce file size instantly without losing
+            Use Creator Cloud to reduce file size instantly without losing
             quality.
           </p>
 

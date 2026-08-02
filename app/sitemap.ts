@@ -14,6 +14,7 @@ export default function sitemap() {
     "/disclaimer",
     "/careers",
     "/templates",
+    "/tabrez-pasha-n",
   ];
 
   const staticUrls = staticPages.map((path) => ({

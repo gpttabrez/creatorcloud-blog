@@ -2,16 +2,25 @@ import type { Metadata } from "next";
 import Footer from "../components/Footer"; 
 
 export const metadata: Metadata = {
-  title: "Contact Us – CreatorCloud Support & Business Queries",
+  title: "Contact Us – Creator Cloud Support & Business Queries",
   description:
-    "Reach out for support, business collaboration or feature requests. CreatorCloud replies usually within 24-48 hours.",
+    "Reach out for support, business collaboration or feature requests. Creator Cloud replies usually within 24-48 hours.",
   authors: [{ name: "Advisory Mediacare Services" }],
+  alternates: {
+    canonical: "https://blog.creatorcloud.in/contact",
+  },
   openGraph: {
-    title: "CreatorCloud Support",
+    title: "Creator Cloud Support",
     description:
-      "Contact CreatorCloud for support, business queries, or feature requests.",
+      "Contact Creator Cloud for support, business queries, or feature requests.",
     url: "https://blog.creatorcloud.in/contact",
-    siteName: "CreatorCloud",
+    siteName: "Creator Cloud",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Creator Cloud Support",
+    description:
+      "Contact Creator Cloud for support, business queries, or feature requests.",
   },
 };
 
@@ -26,7 +35,7 @@ export default function Page() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "ContactPage",
-            name: "CreatorCloud Support",
+            name: "Creator Cloud Support",
             url: "https://blog.creatorcloud.in/contact",
             email: "creatorcloudstudio@gmail.com",
             provider: {
@@ -75,7 +84,7 @@ export default function Page() {
           <p className="font-medium text-cyan-300">Legal & Company</p>
 
           <p className="mt-2">
-            CreatorCloud is owned and operated by{" "}
+            Creator Cloud is owned and operated by{" "}
             <strong>Advisory Mediacare Services</strong>.
             Registered Business Name: Advisory Mediacare Services.
           </p>
@@ -83,7 +92,7 @@ export default function Page() {
           <p className="mt-2 text-xs text-gray-400">
             For business or payment-related inquiries:{" "}
             <a
-              href="mailto:creatorcloudstudio@gmail.com?subject=CreatorCloud Support&body=Hi CreatorCloud team,%0A%0AI need help with:%0A%0AAccount Email:%0A%0ADetails:%0A"
+              href="mailto:creatorcloudstudio@gmail.com?subject=Creator Cloud Support&body=Hi Creator Cloud team,%0A%0AI need help with:%0A%0AAccount Email:%0A%0ADetails:%0A"
               className="text-cyan-300"
             >
               creatorcloudstudio@gmail.com

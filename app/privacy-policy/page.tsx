@@ -2,16 +2,25 @@ import type { Metadata } from "next";
 import Footer from "../components/Footer";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy — CreatorCloud | No Permanent Storage",
+  title: "Privacy Policy — Creator Cloud | No Permanent Storage",
   description:
-    "CreatorCloud privacy policy — secure temporary file processing, no data selling, and user-first privacy protection.",
+    "Creator Cloud privacy policy — secure temporary file processing, no data selling, and user-first privacy protection.",
   authors: [{ name: "Advisory Mediacare Services" }],
+  alternates: {
+    canonical: "https://blog.creatorcloud.in/privacy-policy",
+  },
   openGraph: {
-    title: "CreatorCloud Privacy Policy",
+    title: "Creator Cloud Privacy Policy",
     description:
       "Secure temporary file processing, no data selling, GDPR-ready.",
     url: "https://blog.creatorcloud.in/privacy-policy",
-    siteName: "CreatorCloud",
+    siteName: "Creator Cloud",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Creator Cloud Privacy Policy",
+    description:
+      "Secure temporary file processing, no data selling, GDPR-ready.",
   },
 };
 
@@ -26,7 +35,7 @@ export default function Page() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "WebPage",
-            name: "CreatorCloud Privacy Policy",
+            name: "Creator Cloud Privacy Policy",
             url: "https://blog.creatorcloud.in/privacy-policy",
             publisher: {
               "@type": "Organization",
@@ -47,7 +56,7 @@ export default function Page() {
       <section className="max-w-5xl mx-auto px-6 py-20">
 
         <h1 className="text-4xl font-extrabold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
-          🔥 CreatorCloud — Privacy Policy
+          🔥 Creator Cloud — Privacy Policy
         </h1>
 
         <p className="text-gray-400 mt-1">
@@ -55,7 +64,7 @@ export default function Page() {
         </p>
 
         <p className="mt-6 text-gray-300">
-          Welcome to CreatorCloud — an online suite for video compression, MP3 conversion,
+          Welcome to Creator Cloud — an online suite for video compression, MP3 conversion,
           PDF merge, and image processing. This policy explains how we handle user information.
         </p>
 
@@ -64,7 +73,7 @@ export default function Page() {
           <p className="font-medium text-cyan-300">Legal & Company</p>
 
           <p className="mt-2">
-            CreatorCloud is a product/brand owned and operated by{" "}
+            Creator Cloud is a product/brand owned and operated by{" "}
             <strong>Advisory Mediacare Services</strong>.
             Registered Business Name: Advisory Mediacare Services.
           </p>
@@ -254,7 +263,7 @@ export default function Page() {
         </h2>
 
         <p className="mt-2 text-gray-300">
-          CreatorCloud is not intended for children under age 13.
+          Creator Cloud is not intended for children under age 13.
           If such information is discovered, we remove it immediately.
         </p>
 

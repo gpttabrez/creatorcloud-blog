@@ -35,15 +35,15 @@ export default function BlogTemplate({ title, content }: BlogProps) {
             rel="noopener noreferrer"
             className="text-cyan-300 hover:underline"
           >
-            CreatorCloud Tools
+            Creator Cloud Tools
           </a>
         </p>
 
         {/* AUTHOR */}
         <div className="mt-16 p-6 rounded-xl bg-white/5 border border-white/10">
-          <h3 className="text-lg font-semibold mb-2">About CreatorCloud</h3>
+          <h3 className="text-lg font-semibold mb-2">About Creator Cloud</h3>
           <p className="text-gray-300 text-sm">
-            CreatorCloud helps creators compress, convert, and optimize media files instantly.
+            Creator Cloud helps creators compress, convert, and optimize media files instantly.
           </p>
         </div>
 

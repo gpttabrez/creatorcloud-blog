@@ -1,4 +1,9 @@
 "use client";
+// Note: next/image was tried for this page's images (profile photo, project
+// cards, modal) and fully reverted back to plain <img> after live testing
+// found it unreliable in this environment (intermittent load failures,
+// plus a separate stacking-context bug on the profile photo specifically)
+// -- see the final verification report for the full evidence trail.
 import type { CSSProperties, RefObject } from "react";
 
 import {
@@ -39,7 +44,7 @@ const PROJECTS = [
   { img:"/portfolio/assets/ventra-system.png",     title:"Ventra Ride System",          desc:"Real-time ride & delivery system with live tracking.",                   link:"#",                                                                                     label:"View →" },
   { img:"/portfolio/assets/discord-bot.png",       title:"Discord Automation Bot",      desc:"Automated workflow system with smart matching.",                         link:"#",                                                                                     label:"View →" },
   { img:"/portfolio/assets/trading-system.png",    title:"Trading Automation System",   desc:"Automated trading engine with real-time execution.",                     link:"#",                                                                                     label:"View →" },
-  { img:"/portfolio/assets/creatorcloud.png",      title:"CreatorCloud Platform",       desc:"Online tools for file conversion, compression, and PDFs.",               link:"https://creatorcloud.in",                                                               label:"Visit →" },
+  { img:"/portfolio/assets/creatorcloud.png",      title:"Creator Cloud Platform",       desc:"Online tools for file conversion, compression, and PDFs.",               link:"https://creatorcloud.in",                                                               label:"Visit →" },
   { img:"/portfolio/assets/memory-gpt.png",        title:"Memory GPT System",           desc:"AI system that remembers conversations for better responses.",           link:"https://chatgpt.com/g/g-6981efbc30bc81918f192a24efd98033-memory-gpt",                 label:"View →" },
   { img:"/portfolio/assets/ai-avatar.png",         title:"AI Avatar Video System",      desc:"Transforms images into realistic talking AI videos.",                    link:"#",                                                                                     label:"View →" },
   { img:"/portfolio/assets/automation-system.png", title:"Business Automations", desc:"Automation for WhatsApp, social media, email, and AI chatbots.",        link:"#",                                                                                     label:"Saves Time • Improves Efficiency →" },
@@ -554,11 +559,15 @@ function Modal({
         <img src={project.img} alt={project.title} className="tp-modal-img"/>
         <h2 className="tp-modal-title">{project.title}</h2>
         <p className="tp-modal-desc">{project.desc}</p>
-        {project.link!=="#"&&(
+        {project.link!=="#"?(
           <a href={project.link} target="_blank" rel="noreferrer"
             className="tp-modal-btn" onClick={e=>e.stopPropagation()}>
             Open Project →
           </a>
+        ):(
+          <span className="tp-modal-btn tp-modal-btn-disabled" aria-disabled="true">
+            Private Project — Coming Soon
+          </span>
         )}
       </div>
     </div>
@@ -614,6 +623,16 @@ export default function TabrezPashaN() {
         {/* ══════════ HERO ══════════ */}
         <section className="tp-hero" id="hero">
           <div ref={ambientRef} className="tp-ambient"/>
+          {/* Intentionally left as plain <img>, not next/image: useHeroParallax
+              reads/writes these elements' transform style directly via
+              sphereRefs in a requestAnimationFrame loop on every mousemove.
+              next/image wraps the element and manages its own load/placeholder
+              lifecycle; swapping it here risks interfering with that ref
+              timing or double-wrapping the transform target, and there's no
+              way to verify pixel-perfect parallax behavior without a human
+              actually moving a mouse over the live page. Not worth the risk
+              for a purely decorative background element with no SEO/loading
+              weight (small, already local, non-LCP). */}
           {[0,1,2].map(i=>(
             <img key={i} ref={(el) => {
   sphereRefs.current[i] = el;
@@ -638,7 +657,16 @@ export default function TabrezPashaN() {
                   <WaSvg size={18}/> Chat With Me
                 </a>
               </div>
-              <img src="/portfolio/assets/profile.png" alt="Tabrez Pasha — Systems Developer" className="tp-profile"/>
+              {/* Plain <img>, not next/image -- see the note at the top of
+                  this file's image usages: next/image was fully reverted
+                  site-wide after live verification found it unreliable in
+                  this environment (this specific image also had its own,
+                  separate stacking-context bug on top of that). */}
+              <img
+                src="/portfolio/assets/profile.png"
+                alt="Tabrez Pasha — Systems Developer"
+                className="tp-profile"
+              />
             </div>
 
             <div className="tp-hero-right">
@@ -1367,6 +1395,8 @@ const CSS = `
 .tp-modal-desc{opacity:.75;font-size:clamp(13px,1.7vw,15px);line-height:1.6;margin:0 0 20px;}
 .tp-modal-btn{display:inline-block;padding:11px 24px;background:linear-gradient(135deg,#3b82f6,#2563eb);border-radius:10px;color:white;text-decoration:none;font-weight:600;font-size:14px;box-shadow:0 4px 16px rgba(59,130,246,.35);transition:transform .2s,box-shadow .2s;}
 .tp-modal-btn:hover{transform:scale(1.04);box-shadow:0 6px 24px rgba(59,130,246,.55);}
+.tp-modal-btn-disabled{background:rgba(255,255,255,.08);color:rgba(255,255,255,.55);box-shadow:none;cursor:default;border:1px dashed rgba(255,255,255,.2);}
+.tp-modal-btn-disabled:hover{transform:none;box-shadow:none;}
 .tp-glow-icon{
   color:#60a5fa;
 

@@ -2,21 +2,46 @@ import type { Metadata } from "next";
 import Footer from "../components/Footer";
 
 export const metadata: Metadata = {
-  title: "Website Templates – CreatorCloud",
+  title: "Website Templates – Creator Cloud",
   description:
-    "Buy high-quality website templates for creators, businesses, and developers. Fast, modern, and optimized designs by CreatorCloud.",
+    "Buy high-quality website templates for creators, businesses, and developers. Fast, modern, and optimized designs by Creator Cloud.",
+  alternates: {
+    canonical: "https://blog.creatorcloud.in/templates",
+  },
   openGraph: {
-    title: "CreatorCloud Templates",
+    title: "Creator Cloud Templates",
     description:
       "Premium website templates for creators and businesses.",
     url: "https://blog.creatorcloud.in/templates",
-    siteName: "CreatorCloud",
+    siteName: "Creator Cloud",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Creator Cloud Templates",
+    description:
+      "Premium website templates for creators and businesses.",
+  },
+};
+
+const templatesSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  name: "Website Templates by Creator Cloud",
+  url: "https://blog.creatorcloud.in/templates",
+  isPartOf: {
+    "@type": "WebSite",
+    name: "Creator Cloud Blog",
+    url: "https://blog.creatorcloud.in",
   },
 };
 
 export default function TemplatesPage() {
   return (
     <main className="min-h-screen bg-[#050816] text-gray-100">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(templatesSchema) }}
+      />
 
       <section className="max-w-6xl mx-auto px-6 py-20">
 
@@ -24,7 +49,7 @@ export default function TemplatesPage() {
         <h1 className="text-4xl md:text-5xl font-extrabold">
           Website Templates by{" "}
           <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
-            CreatorCloud
+            Creator Cloud
           </span>
         </h1>
 

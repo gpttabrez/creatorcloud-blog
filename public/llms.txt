@@ -1,0 +1,34 @@
+# Creator Cloud Blog
+
+> The Creator Cloud blog: guides on video compression, image optimization, PDF tools, and creator workflows, plus company pages. The actual product (compress/convert/merge tools) lives at creatorcloud.in, not on this subdomain.
+
+## Guides
+
+- [How to Compress Videos Without Losing Quality](https://blog.creatorcloud.in/blog/how-to-compress-videos)
+- [Best Image Formats Explained (JPG vs PNG vs WebP vs AVIF)](https://blog.creatorcloud.in/blog/best-image-formats)
+- [MP4 to MP3 Conversion Guide](https://blog.creatorcloud.in/blog/mp4-to-mp3-conversion)
+- [PDF Tools Every Creator Should Know](https://blog.creatorcloud.in/blog/pdf-tools-every-creator-should-know)
+- [Why File Compression Matters for Creators](https://blog.creatorcloud.in/blog/why-file-compression-matters)
+- [How to Convert Images to PDF](https://blog.creatorcloud.in/blog/how-to-convert-images-to-pdf)
+- [Compress Video Without Quality Loss](https://blog.creatorcloud.in/blog/compress-video-without-quality-loss)
+- [10 Tools for Instagram Creators](https://blog.creatorcloud.in/blog/10-tools-instagram-creators)
+- [Best AI Tools for Designers](https://blog.creatorcloud.in/blog/best-ai-tools-for-designers)
+
+## Company
+
+- [About](https://blog.creatorcloud.in/about)
+- [Contact](https://blog.creatorcloud.in/contact)
+- [Careers](https://blog.creatorcloud.in/careers)
+- [Privacy Policy](https://blog.creatorcloud.in/privacy-policy)
+- [Terms](https://blog.creatorcloud.in/terms)
+- [Refund Policy](https://blog.creatorcloud.in/refund-policy)
+- [Disclaimer](https://blog.creatorcloud.in/disclaimer)
+
+## Other
+
+- [Tabrez Pasha — Systems & Automation Developer (portfolio)](https://blog.creatorcloud.in/tabrez-pasha-n)
+- [Website Templates](https://blog.creatorcloud.in/templates) — coming soon, not yet available for purchase
+
+## The actual product
+
+Creator Cloud's tools (video compression, image compression/conversion, PDF merge/compress, MP4-to-MP3) run at [creatorcloud.in](https://creatorcloud.in/), a separate application from this blog subdomain. See `creatorcloud.in/llms.txt` for the tool-by-tool breakdown.

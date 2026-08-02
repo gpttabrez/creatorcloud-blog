@@ -3,7 +3,7 @@ import Footer from "@/app/components/Footer";
 import Link from "next/link";
 
 export const metadata = {
-  title: "10 Tools for Instagram Creators in 2026 | CreatorCloud",
+  title: "10 Tools for Instagram Creators in 2026 | Creator Cloud",
 
   description:
     "Discover the best tools for Instagram creators in 2026. AI editing, automation, analytics, and growth tools to scale faster.",
@@ -14,7 +14,7 @@ export const metadata = {
     "best creator tools",
     "AI tools for Instagram",
     "Instagram growth tools",
-    "CreatorCloud",
+    "Creator Cloud",
     "video optimization tools",
     "Instagram workflow tools",
   ],
@@ -37,7 +37,7 @@ export const metadata = {
     url:
       "https://blog.creatorcloud.in/blog/10-tools-instagram-creators",
 
-    siteName: "CreatorCloud",
+    siteName: "Creator Cloud",
 
     images: [
       {
@@ -78,12 +78,12 @@ export default function Page() {
 
     author: {
       "@type": "Organization",
-      name: "CreatorCloud",
+      name: "Creator Cloud",
     },
 
     publisher: {
       "@type": "Organization",
-      name: "CreatorCloud",
+      name: "Creator Cloud",
       logo: {
         "@type": "ImageObject",
         url: "https://creatorcloud.in/favicon.ico",
@@ -107,7 +107,7 @@ export default function Page() {
         name: "Which tool is best for Instagram growth?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "CapCut, Canva, and CreatorCloud combined.",
+          text: "CapCut, Canva, and Creator Cloud combined.",
         },
       },
 
@@ -264,7 +264,7 @@ export default function Page() {
             </p>
 
             <h3 className="text-xl font-semibold mt-6">
-              10. CreatorCloud
+              10. Creator Cloud
             </h3>
             <p>
               Optimize files for faster uploads and better reach.
@@ -344,7 +344,7 @@ export default function Page() {
               </h3>
 
               <p className="text-gray-300 mb-4">
-                Use CreatorCloud tools to prepare your content before posting.
+                Use Creator Cloud tools to prepare your content before posting.
               </p>
 
               <div className="flex flex-wrap gap-3">
@@ -384,7 +384,7 @@ export default function Page() {
                   </p>
 
                   <p>
-                    CapCut, Canva, and CreatorCloud combined.
+                    CapCut, Canva, and Creator Cloud combined.
                   </p>
                 </div>
 

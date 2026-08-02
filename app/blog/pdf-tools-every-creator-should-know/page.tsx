@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export const metadata = {
   title:
-    "PDF Tools Every Creator Should Know in 2026 | CreatorCloud",
+    "PDF Tools Every Creator Should Know in 2026 | Creator Cloud",
 
   description:
     "Discover the best PDF tools for creators in 2026. Learn how to merge, compress, convert, and manage PDF files efficiently.",
@@ -15,7 +15,7 @@ export const metadata = {
     "PDF compressor",
     "PDF converter",
     "images to PDF",
-    "CreatorCloud",
+    "Creator Cloud",
     "online PDF tools",
     "PDF management",
     "document tools",
@@ -41,7 +41,7 @@ export const metadata = {
     url:
       "https://blog.creatorcloud.in/blog/pdf-tools-every-creator-should-know",
 
-    siteName: "CreatorCloud",
+    siteName: "Creator Cloud",
 
     images: [
       {
@@ -92,12 +92,12 @@ export default function Page() {
 
     author: {
       "@type": "Organization",
-      name: "CreatorCloud",
+      name: "Creator Cloud",
     },
 
     publisher: {
       "@type": "Organization",
-      name: "CreatorCloud",
+      name: "Creator Cloud",
 
       logo: {
         "@type": "ImageObject",
@@ -389,7 +389,7 @@ export default function Page() {
               </h3>
 
               <p className="text-gray-300 mb-4">
-                Try CreatorCloud tools to manage your PDF files instantly.
+                Try Creator Cloud tools to manage your PDF files instantly.
               </p>
 
               <div className="flex flex-wrap gap-3">
@@ -435,7 +435,7 @@ export default function Page() {
                   </p>
 
                   <p>
-                    Yes, trusted tools like CreatorCloud process files securely
+                    Yes, trusted tools like Creator Cloud process files securely
                     and do not store data permanently.
                   </p>
                 </div>

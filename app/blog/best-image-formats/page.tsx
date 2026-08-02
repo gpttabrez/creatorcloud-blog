@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export const metadata = {
   title:
-    "Best Image Formats Explained in 2026 | JPG vs PNG vs WebP | CreatorCloud",
+    "Best Image Formats Explained in 2026 | JPG vs PNG vs WebP | Creator Cloud",
 
   description:
     "Learn the best image formats in 2026. Compare JPG, PNG, WebP, and AVIF for quality, compression, and performance optimization.",
@@ -16,7 +16,7 @@ export const metadata = {
     "image optimization",
     "best image format for websites",
     "image compression",
-    "CreatorCloud",
+    "Creator Cloud",
     "modern image formats",
   ],
 
@@ -40,7 +40,7 @@ export const metadata = {
     url:
       "https://blog.creatorcloud.in/blog/best-image-formats",
 
-    siteName: "CreatorCloud",
+    siteName: "Creator Cloud",
 
     images: [
       {
@@ -89,12 +89,12 @@ export default function Page() {
 
     author: {
       "@type": "Organization",
-      name: "CreatorCloud",
+      name: "Creator Cloud",
     },
 
     publisher: {
       "@type": "Organization",
-      name: "CreatorCloud",
+      name: "Creator Cloud",
 
       logo: {
         "@type": "ImageObject",
@@ -374,7 +374,7 @@ export default function Page() {
               </h3>
 
               <p className="text-gray-300 mb-4">
-                Compress and convert your images using CreatorCloud tools.
+                Compress and convert your images using Creator Cloud tools.
               </p>
 
               <div className="flex flex-wrap gap-3">

@@ -2,28 +2,53 @@ import type { Metadata } from "next";
 import Footer from "../components/Footer";
 
 export const metadata: Metadata = {
-  title: "Careers – CreatorCloud",
+  title: "Careers – Creator Cloud",
   description:
-    "Join CreatorCloud and help build powerful tools for creators. Remote opportunities, flexible work, and innovation-driven environment.",
+    "Join Creator Cloud and help build powerful tools for creators. Remote opportunities, flexible work, and innovation-driven environment.",
+  alternates: {
+    canonical: "https://blog.creatorcloud.in/careers",
+  },
   openGraph: {
-    title: "Careers at CreatorCloud",
+    title: "Careers at Creator Cloud",
     description:
-      "Work with CreatorCloud — build tools for millions of creators worldwide.",
+      "Work with Creator Cloud — build tools for millions of creators worldwide.",
     url: "https://blog.creatorcloud.in/careers",
-    siteName: "CreatorCloud",
+    siteName: "Creator Cloud",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Careers at Creator Cloud",
+    description:
+      "Work with Creator Cloud — build tools for millions of creators worldwide.",
+  },
+};
+
+const careersSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  name: "Careers at Creator Cloud",
+  url: "https://blog.creatorcloud.in/careers",
+  isPartOf: {
+    "@type": "WebSite",
+    name: "Creator Cloud Blog",
+    url: "https://blog.creatorcloud.in",
   },
 };
 
 export default function CareersPage() {
   return (
     <main className="min-h-screen bg-[#050816] text-gray-100">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(careersSchema) }}
+      />
 
       <section className="max-w-5xl mx-auto px-6 py-20">
 
         <h1 className="text-4xl md:text-5xl font-extrabold">
           Careers at{" "}
           <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
-            CreatorCloud
+            Creator Cloud
           </span>
         </h1>
 
@@ -71,7 +96,7 @@ export default function CareersPage() {
           </p>
 
           <a
-            href="mailto:creatorcloudstudio@gmail.com?subject=Application for CreatorCloud&body=Hi CreatorCloud team,%0A%0AI am applying for the position of:%0A%0APortfolio:%0A%0AExperience:%0A"
+            href="mailto:creatorcloudstudio@gmail.com?subject=Application for Creator Cloud&body=Hi Creator Cloud team,%0A%0AI am applying for the position of:%0A%0APortfolio:%0A%0AExperience:%0A"
             className="inline-block mt-4 px-6 py-3 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-lg text-black font-semibold"
           >
             Apply Now →
@@ -85,7 +110,7 @@ export default function CareersPage() {
 
         {/* ================= LEGAL ================= */}
         <div className="mt-12 text-sm text-gray-400 text-center">
-          CreatorCloud is operated by{" "}
+          Creator Cloud is operated by{" "}
           <span className="text-cyan-300">Advisory Mediacare Services</span>,
           Bangalore, India.
         </div>

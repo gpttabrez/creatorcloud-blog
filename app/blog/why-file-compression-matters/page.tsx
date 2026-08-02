@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export const metadata = {
   title:
-    "Why File Compression Matters in 2026 | CreatorCloud",
+    "Why File Compression Matters in 2026 | Creator Cloud",
 
   description:
     "Learn why file compression is essential in 2026. Improve performance, reduce file size, and optimize media for faster uploads and better user experience.",
@@ -17,7 +17,7 @@ export const metadata = {
     "video compression",
     "image compression",
     "PDF compression",
-    "CreatorCloud",
+    "Creator Cloud",
     "website optimization",
   ],
 
@@ -41,7 +41,7 @@ export const metadata = {
     url:
       "https://blog.creatorcloud.in/blog/why-file-compression-matters",
 
-    siteName: "CreatorCloud",
+    siteName: "Creator Cloud",
 
     images: [
       {
@@ -92,12 +92,12 @@ export default function Page() {
 
     author: {
       "@type": "Organization",
-      name: "CreatorCloud",
+      name: "Creator Cloud",
     },
 
     publisher: {
       "@type": "Organization",
-      name: "CreatorCloud",
+      name: "Creator Cloud",
 
       logo: {
         "@type": "ImageObject",
@@ -384,7 +384,7 @@ export default function Page() {
               </h3>
 
               <p className="text-gray-300 mb-4">
-                Use CreatorCloud tools to optimize your files instantly.
+                Use Creator Cloud tools to optimize your files instantly.
               </p>
 
               <div className="flex flex-wrap gap-3">

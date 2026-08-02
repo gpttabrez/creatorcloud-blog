@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export const metadata = {
   title:
-    "How to Convert Images to PDF in 2026 | CreatorCloud",
+    "How to Convert Images to PDF in 2026 | Creator Cloud",
 
   description:
     "Learn how to convert images to PDF easily in 2026. Step-by-step guide with best tools, tips, and optimization techniques.",
@@ -16,7 +16,7 @@ export const metadata = {
     "PNG to PDF",
     "PDF conversion",
     "image to PDF converter",
-    "CreatorCloud",
+    "Creator Cloud",
     "online PDF tools",
     "combine images into PDF",
   ],
@@ -41,7 +41,7 @@ export const metadata = {
     url:
       "https://blog.creatorcloud.in/blog/how-to-convert-images-to-pdf",
 
-    siteName: "CreatorCloud",
+    siteName: "Creator Cloud",
 
     images: [
       {
@@ -92,12 +92,12 @@ export default function Page() {
 
     author: {
       "@type": "Organization",
-      name: "CreatorCloud",
+      name: "Creator Cloud",
     },
 
     publisher: {
       "@type": "Organization",
-      name: "CreatorCloud",
+      name: "Creator Cloud",
 
       logo: {
         "@type": "ImageObject",
@@ -292,7 +292,7 @@ export default function Page() {
 
             <ul className="list-disc ml-6">
               <li>
-                CreatorCloud – fast and simple online conversion
+                Creator Cloud – fast and simple online conversion
               </li>
 
               <li>
@@ -387,7 +387,7 @@ export default function Page() {
               </h3>
 
               <p className="text-gray-300 mb-4">
-                Use CreatorCloud to quickly convert images into high-quality
+                Use Creator Cloud to quickly convert images into high-quality
                 PDFs.
               </p>
 
