@@ -37,12 +37,12 @@ export default function Page() {
             "@type": "ContactPage",
             name: "Creator Cloud Support",
             url: "https://blog.creatorcloud.in/contact",
-            email: "creatorcloudstudio@gmail.com",
+            email: "support@creatorcloud.in",
             provider: {
               "@type": "Organization",
               name: "Advisory Mediacare Services",
               url: "https://creatorcloud.in",
-              email: "creatorcloudstudio@gmail.com",
+              email: "support@creatorcloud.in",
               address: {
                 "@type": "PostalAddress",
                 addressLocality: "Bangalore",
@@ -92,10 +92,10 @@ export default function Page() {
           <p className="mt-2 text-xs text-gray-400">
             For business or payment-related inquiries:{" "}
             <a
-              href="mailto:creatorcloudstudio@gmail.com?subject=Creator Cloud Support&body=Hi Creator Cloud team,%0A%0AI need help with:%0A%0AAccount Email:%0A%0ADetails:%0A"
+              href="mailto:support@creatorcloud.in?subject=Creator Cloud Support&body=Hi Creator Cloud team,%0A%0AI need help with:%0A%0AAccount Email:%0A%0ADetails:%0A"
               className="text-cyan-300"
             >
-              creatorcloudstudio@gmail.com
+              support@creatorcloud.in
             </a>
             <span className="mx-2">•</span> Bangalore, Karnataka, India
           </p>
