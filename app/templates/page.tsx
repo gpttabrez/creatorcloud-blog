@@ -115,17 +115,17 @@ export default function TemplatesPage() {
 
         </div>
 
-        {/* CONTACT CTA */}
+        {/* REQUEST A QUOTE CTA */}
         <div className="mt-16 text-center">
           <p className="text-gray-300">
-            Want early access or custom template?
+            Want early access or a custom template built for you?
           </p>
 
           <a
-            href="mailto:creatorcloudstudio@gmail.com?subject=Template Inquiry"
+            href="mailto:support@creatorcloud.in?subject=Template Quote Request&body=Hi Creator Cloud team,%0A%0AI'd like a quote for a template. Here are my details:%0A%0ATemplate style/type:%0A%0AIntended use (personal / business / startup):%0A%0ABudget range:%0A%0ATimeline:%0A%0AAdditional details:%0A"
             className="inline-block mt-4 px-6 py-3 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-lg text-black font-semibold"
           >
-            Contact Us →
+            Request a Quote →
           </a>
         </div>
 

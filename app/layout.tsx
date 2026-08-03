@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import Script from "next/script";
+import CookieConsent from "./components/CookieConsent";
 import "./globals.css";
 
 export const viewport: Viewport = {
@@ -162,6 +163,7 @@ export default function RootLayout({
 
       <body className="min-h-screen bg-[#050816] text-white">
         {children}
+        <CookieConsent />
       </body>
     </html>
   );
